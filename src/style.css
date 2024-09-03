@@ -1,0 +1,57 @@
+
+body {
+    margin: 0;
+    background-color: blueviolet;
+}
+
+.calculator_grid {
+    display: grid;
+    margin-top: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+
+}
+
+.calculator_grid > button{
+    cursor: pointer;
+    font-size: 2 rem;
+    border: 1px solid white;
+    outline: auto;
+    background-color: rgba(255, 255, 255, .75);
+
+}
+
+.calculator_grid >button:hover,
+.calculator_grid >button:focus{
+    background-color: rgba(255, 255, 255, .90);
+
+}
+
+.func {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: .75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous_data {
+    color: aliceblue;
+    font-size: small;
+}
+
+.output .current_data {
+    color: white;
+    font-size: medium;
+}
+
+
